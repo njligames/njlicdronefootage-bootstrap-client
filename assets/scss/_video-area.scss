@@ -125,7 +125,7 @@
             bottom: -2px;
             right: -2px;
             border-radius: inherit;
-            border: 1px solid #FF5F21;
+            border: 1px solid $theme-color2;
             -webkit-animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
             animation: btnIconRipple 2s cubic-bezier(0.23, 1, 0.32, 1) both infinite;
             }
@@ -183,7 +183,7 @@
     content: "";
     top: 0;
     left: 0;
-    background-image: radial-gradient(red 20%, transparent 18%);
+    background-image: radial-gradient($theme-color, transparent 18%);
     background-position: 0 0;
     background-size: 6px 11px;
     height: 90%;
@@ -215,18 +215,23 @@
         position: absolute;
         width: 64px;
         height: 64px;
-        background-image: url(../img/icon/message.svg);
+        background-image: url(../img/icon/message.png);
         left: -91px;
         top: -1px;
     }
     &.single-items2 {
         span::before {
-            background-image: url(../img/icon/bug.svg);
+            background-image: url(../img/icon/bug.png);
         }
     }
     &.single-items3 {
         span::before {
-            background-image: url(../img/icon/downlode.svg);
+            background-image: url(../img/icon/downlode.png);
+        }
+    }
+    &.single-items4 {
+        span::before {
+            background-image: url(../img/icon/timelapse.png);
         }
     }
     p {

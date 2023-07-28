@@ -16,7 +16,7 @@
     }
     .footer-tittle{
         h4{
-            color: #FF5F21;
+            color: $theme-color3;
             font-size: 20px;
             margin-bottom: 40px;
             font-weight: 400;
@@ -155,7 +155,7 @@
 .number a {
     font-family: $font_1;
 	font-size: 26px !important;
-	color:#FF5F21 !important;
+	color:$theme-color3 !important;
 	margin-bottom: 0px;
     display: block;
     @media #{$md}{
@@ -165,7 +165,7 @@
 .number2 a {
     font-family: $font_1;
 	font-size: 14px !important;
-	color: #FF5F21 !important;
+	color: $theme-color3 !important;
 	margin-bottom: 23px;
     display: block;
     @media #{$md}{
