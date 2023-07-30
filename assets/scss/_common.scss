@@ -352,6 +352,11 @@ hr {
 	border-radius: 0px;
 	font-weight: 50
 }
+.submit-btn2:hover{
+	background-position: left;
+	background-image: linear-gradient(to left,$btn_hover_bg, darken($btn_hover_bg, 10%), $btn_hover_bg) !important;
+	color: #fff;
+  }
 
 
 .hero-btn{

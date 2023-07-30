@@ -528,6 +528,12 @@ hr {
   font-weight: 50;
 }
 
+.submit-btn2:hover {
+  background-position: left;
+  background-image: linear-gradient(to left, #D1321C, #a42716, #D1321C) !important;
+  color: #fff;
+}
+
 .hero-btn {
   border: 2px solid #fff;
   color: #fff;
@@ -4213,6 +4219,26 @@ video {
   .bg-height.pb-160 {
     padding-bottom: 100px;
   }
+}
+
+.modal-dialog {
+  max-width: 75%;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+.close {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  z-index: 999;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #fff;
+  opacity: 1;
 }
 
 .footer-wrapper {
