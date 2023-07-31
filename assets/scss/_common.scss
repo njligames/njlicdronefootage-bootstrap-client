@@ -1070,3 +1070,36 @@ video {
   	min-width: 100%; 
   	min-height: 100%;
 }
+
+.card1:hover {
+	background:$theme-color3;
+	border:1px solid $theme-color3;
+}
+
+.card1:hover .list-group-item{
+	background:$theme-color3 !important
+}
+
+.card2:hover {
+	background:$theme-color3;
+	border:1px solid $theme-color3;
+}
+
+.card2:hover .list-group-item{
+	background:$theme-color3 !important
+}
+
+.card3:hover {
+	background:$theme-color3;
+	border:1px solid $theme-color3;
+}
+
+.card3:hover .list-group-item{
+	background:$theme-color3 !important
+}
+
+
+.card:hover .btn-outline-dark{
+	color:$white;
+	background:darken($theme-color3, 30%);
+}

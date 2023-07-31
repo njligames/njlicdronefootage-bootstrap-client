@@ -293,4 +293,17 @@
   // $("#bar4").barfiller();
   // $("#bar5").barfiller();
   // $("#bar6").barfiller();
+
+  function changeSelectLevel1() {
+    if (document.getElementById("dropBox").value == "1") {
+      document.getElementById("divText").innerHTML = "...";
+    } else if (document.getElementById("dropBox").value == "2") {
+      document.getElementById("divText").innerHTML =
+        "[HEADER] [DATE] [COUNT] ...";
+    } else if (document.getElementById("dropBox").value == "3") {
+      document.getElementById("divText").innerHTML = "[HEADER] ...";
+    } else if (document.getElementById("dropBox").value == "4") {
+      document.getElementById("divText").innerHTML = "NOTE [DATE] ...";
+    }
+  }
 })(jQuery);

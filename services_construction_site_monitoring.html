@@ -349,83 +349,182 @@
         </div>
       </section>
       <!--? Testimonial Area End -->
-      <div class="contact-form">
-        <div class="container">
+
+      <script>
+  function changeSelectLevel1() {
+    if (document.getElementById("dropBox").value == "1") {
+      document.getElementById("divText").innerHTML = "$474.99";
+    } else if (document.getElementById("dropBox").value == "2") {
+      document.getElementById("divText").innerHTML =
+        "$855.99";
+    } else if (document.getElementById("dropBox").value == "3") {
+      document.getElementById("divText").innerHTML = "$1,190.99";
+    } 
+  }
+  function changeSelectLevel2() {
+    if (document.getElementById("dropBox2").value == "1") {
+      document.getElementById("divText2").innerHTML = "$426.99";
+    } else if (document.getElementById("dropBox2").value == "2") {
+      document.getElementById("divText2").innerHTML =
+        "$807.99";
+    } else if (document.getElementById("dropBox2").value == "3") {
+      document.getElementById("divText2").innerHTML = "$1,145.99";
+    } 
+  }
+  function changeSelectLevel3() {
+    if (document.getElementById("dropBox3").value == "1") {
+      document.getElementById("divText3").innerHTML = "$379.99";
+    } else if (document.getElementById("dropBox3").value == "2") {
+      document.getElementById("divText3").innerHTML =
+        "$762.99";
+    } else if (document.getElementById("dropBox3").value == "3") {
+      document.getElementById("divText3").innerHTML = "$1,114.99";
+    } 
+  }
+      </script>
+      <!-- pricing grid start-->
+      <div class="container-fluid">
+        <div class="container p-5">
           <div class="row">
-            <div class="col-lg-5">
-              <div class="form-wrapper">
-                <div class="row">
-                  <div class="col-xl-12 col-lg-11 col-md-8 col-lg-7 col-sm-9">
-                    <div class="section-tittle mb-30">
-                      <h2>Get a Quote</h2>
-                      <p>
-                        Unlock the true potential of your project with our
-                        aerial prowess. Request a quote now and ascend to new
-                        levels of success, leaving your competition behind in
-                        awe.
-                      </p>
-                    </div>
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card card1 h-100">
+                <div class="card-body">
+                  <h1 class="card-title">Single Visit</h1>
+                  <small class='text-muted'>Basic</small>
+                  <br><br>
+                  <span id="divText" class="h2">$474.99</span> / visit
+                  <br><br>
+                  <select type="text" id="dropBox" onchange="changeSelectLevel1()">
+                    <option value="1">Up to 300K ft<p>&#178;</p> build | Up to 30 Acres</option>
+                    <option value="2">Up to 800K ft<p>&#178;</p> build | Up to 100 Acres</option>
+                    <option value="3">Up to 1.4M ft<p>&#178;</p> build | Up to 300 Acres</option>
+                  </select>
+                  <br><br>
+                  <div class="d-grid my-3">
+                    <button class="btn btn-outline-dark btn-block">Select</button>
                   </div>
+                  <ul>
+                    <li>Dedicate Project Manager</li>
+                    <li>Free Hosting</li>
+                    <li>Kick-Off Call to Discuss Flight Plan</li>
+                    <li>40 Aerial Photos</li>
+                    <li>Raw Footage from Site Visit</li>
+                    <li>Compiled Video Including Flight Plan for</li>
+                    <ul>
+                      <li>+ Custom 20 min. Drone Video Shot</li>
+                      <li>+ 360&deg; Aerial Orbit of Entire Site</li>
+                      <li>+ 2 Flyover Shots in Opposite Directions</li>
+                      <li>+ Lawnmower Shot of Entire Site</li>
+                      <li>+ Dolly Shot Facing First Floor</li>
+                    </ul>
+                    <li><del>Photo Timelapse</del></li>
+                    <li><del>Video Timelapse</del></li>
+                  </ul>
                 </div>
-                <form id="contact-form" action="#" method="POST">
-                  <div class="row">
-                    <div class="col-lg-12 col-md-6">
-                      <div class="form-box user-icon mb-15">
-                        <input
-                          type="text"
-                          name="name"
-                          placeholder="Your Name"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-md-6">
-                      <div class="form-box email-icon mb-15">
-                        <input type="text" name="email" placeholder="Email" />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-md-6">
-                      <div class="form-box email-icon mb-15">
-                        <input
-                          type="text"
-                          name="email"
-                          placeholder="Phone no."
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-12 col-md-6 mb-15">
-                      <div class="select-itms">
-                        <select name="select" id="select2">
-                          <option value="">Topic</option>
-                          <option value="">Topic one</option>
-                          <option value="">Topic Two</option>
-                          <option value="">Topic Three</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="form-box message-icon mb-15">
-                        <textarea
-                          name="message"
-                          id="message"
-                          placeholder="Message"
-                        ></textarea>
-                      </div>
-                      <div class="submit-info">
-                        <button class="submit-btn2" type="submit">
-                          Send Message
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
               </div>
             </div>
-          </div>
+
+
+
+
+
+
+
+
+
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card card1 h-100">
+                <div class="card-body">
+                  <h1 class="card-title">5 to 10 Visits</h1>
+                  <small class='text-muted'>Standard</small>
+                  <br><br>
+                  <span id="divText2" class="h2">$426.99</span> / visit
+                  <br><br>
+                  <select type="text" id="dropBox2" onchange="changeSelectLevel2()">
+                    <option value="1">Up to 300K ft<p>&#178;</p> build | Up to 30 Acres</option>
+                    <option value="2">Up to 800K ft<p>&#178;</p> build | Up to 100 Acres</option>
+                    <option value="3">Up to 1.4M ft<p>&#178;</p> build | Up to 300 Acres</option>
+                  </select>
+                  <br><br>
+                  <div class="d-grid my-3">
+                    <button class="btn btn-outline-dark btn-block">Select</button>
+                  </div>
+                  <ul>
+                    <li>Dedicate Project Manager</li>
+                    <li>Free Hosting</li>
+                    <li>Kick-Off Call to Discuss Flight Plan</li>
+                    <li>40 Aerial Photos</li>
+                    <li>Raw Footage from Site Visit</li>
+                    <li>Compiled Video Including Flight Plan for</li>
+                    <ul>
+                      <li>+ Custom 20 min. Drone Video Shot</li>
+                      <li>+ 360&deg; Aerial Orbit of Entire Site</li>
+                      <li>+ 2 Flyover Shots in Opposite Directions</li>
+                      <li>+ Lawnmower Shot of Entire Site</li>
+                      <li>+ Dolly Shot Facing First Floor</li>
+                    </ul>
+                    <li><del>Photo Timelapse</del></li>
+                    <li>Video Timelapse</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-lg-4 col-md-12 mb-4">
+              <div class="card card1 h-100">
+                <div class="card-body">
+                  <h1 class="card-title">11+ Visits</h1>
+                  <small class='text-muted'>Premium</small>
+                  <br><br>
+                  <span id="divText3" class="h2">$379.99</span> / visit
+                  <br><br>
+                  <select type="text" id="dropBox3" onchange="changeSelectLevel3()">
+                    <option value="1">Up to 300K ft<p>&#178;</p> build | Up to 30 Acres</option>
+                    <option value="2">Up to 800K ft<p>&#178;</p> build | Up to 100 Acres</option>
+                    <option value="3">Up to 1.4M ft<p>&#178;</p> build | Up to 300 Acres</option>
+                  </select>
+                  <br><br>
+                  <div class="d-grid my-3">
+                    <button class="btn btn-outline-dark btn-block">Select</button>
+                  </div>
+                  <ul>
+                    <li>Dedicate Project Manager</li>
+                    <li>Free Hosting</li>
+                    <li>Kick-Off Call to Discuss Flight Plan</li>
+                    <li>40 Aerial Photos</li>
+                    <li>Raw Footage from Site Visit</li>
+                    <li>Compiled Video Including Flight Plan for</li>
+                    <ul>
+                      <li>+ Custom 20 min. Drone Video Shot</li>
+                      <li>+ 360&deg; Aerial Orbit of Entire Site</li>
+                      <li>+ 2 Flyover Shots in Opposite Directions</li>
+                      <li>+ Lawnmower Shot of Entire Site</li>
+                      <li>+ Dolly Shot Facing First Floor</li>
+                    </ul>
+                    <li>Photo Timelapse</li>
+                    <li>Video Timelapse</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>    
         </div>
-        <div class="contact-img">
-          <img src="assets/img/gallery/contact-img.png" alt="" />
-        </div>
-      </div>
+      </body>
+      <!-- pricing grid end-->
     </main>
     <footer>
       <div

@@ -2548,6 +2548,38 @@ video {
   min-height: 100%;
 }
 
+.card1:hover {
+  background: #61D11C;
+  border: 1px solid #61D11C;
+}
+
+.card1:hover .list-group-item {
+  background: #61D11C !important;
+}
+
+.card2:hover {
+  background: #61D11C;
+  border: 1px solid #61D11C;
+}
+
+.card2:hover .list-group-item {
+  background: #61D11C !important;
+}
+
+.card3:hover {
+  background: #61D11C;
+  border: 1px solid #61D11C;
+}
+
+.card3:hover .list-group-item {
+  background: #61D11C !important;
+}
+
+.card:hover .btn-outline-dark {
+  color: #ffffff;
+  background: #224a0a;
+}
+
 /*-------------   Color Variable  --------------*/
 .gradient-background {
   background-image: linear-gradient(to left, #0BC6FF, #0d80f3, #0BC6FF);
