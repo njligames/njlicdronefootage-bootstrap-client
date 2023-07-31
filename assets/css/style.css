@@ -2580,6 +2580,30 @@ video {
   background: #224a0a;
 }
 
+.video-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  transition: 0.6s;
+  box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(to left, #1CBBD1, #1693a4, #1CBBD1);
+  background-position: right;
+  background-size: 200%;
+}
+
+.video-btn:hover {
+  background-position: left;
+  background-image: linear-gradient(to left, #D1321C, #a42716, #D1321C) !important;
+  color: #fff;
+  cursor: pointer;
+}
+
+.video-btn-img {
+  top: 50%;
+  left: 0;
+  transform: translate(0%, 5%);
+}
+
 /*-------------   Color Variable  --------------*/
 .gradient-background {
   background-image: linear-gradient(to left, #0BC6FF, #0d80f3, #0BC6FF);
