@@ -30,7 +30,7 @@
                     font-size: 16px;
                     text-decoration: underline transparent;
                     &:hover{
-                        color: #FF5F21;
+                        color: $theme-color2;
                         text-decoration: underline;
                     }
                    
@@ -140,7 +140,7 @@
 
         &:hover{
             color: #fff;
-            background: #FF5F21;
+            background: $theme-color2;
             i{
                 transform: rotateY(180deg);
                 -webkit-transform: rotateY(180deg);
