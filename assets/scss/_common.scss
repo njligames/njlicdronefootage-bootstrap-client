@@ -1110,13 +1110,14 @@ video {
 	border: none;
 	transition: 0.6s;
 	box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.12);
-	background-image: linear-gradient(to left,$btn_bg, darken($btn_bg, 10%), $btn_bg);
+	// background-image: linear-gradient(to left,$btn_bg, darken($btn_bg, 10%), $btn_bg);
+	background-color:transparent;
 	background-position: right;
 	background-size: 200%;
 }
 .video-btn:hover{
 	background-position: left;
-	background-image: linear-gradient(to left,$btn_hover_bg, darken($btn_hover_bg, 10%), $btn_hover_bg) !important;
+	// background-image: linear-gradient(to left,$btn_hover_bg, darken($btn_hover_bg, 10%), $btn_hover_bg) !important;
 	color: #fff;
 	cursor: pointer;
 }

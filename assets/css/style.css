@@ -2586,14 +2586,13 @@ video {
   border: none;
   transition: 0.6s;
   box-shadow: 0px 7px 21px 0px rgba(0, 0, 0, 0.12);
-  background-image: linear-gradient(to left, #1CBBD1, #1693a4, #1CBBD1);
+  background-color: transparent;
   background-position: right;
   background-size: 200%;
 }
 
 .video-btn:hover {
   background-position: left;
-  background-image: linear-gradient(to left, #D1321C, #a42716, #D1321C) !important;
   color: #fff;
   cursor: pointer;
 }
@@ -3788,7 +3787,7 @@ video {
   position: relative;
   right: -2px;
   top: 2px;
-  color: #FF5F21;
+  color: #1CBBD1;
 }
 .video-area .video-icon a.btn-icon {
   position: relative;
