@@ -9,6 +9,7 @@ import csv
 # button_text="Aerial Marketing Video: Weaving Stories, Uniting Perspectives"
 
 item="""
+<!-- Item Start-->
 <div class="col-lg-4">
   <div class="single-cat">
     <div class="cat-icon">
@@ -37,6 +38,7 @@ item="""
     </div>
   </div>
 </div>
+<!-- Item End-->
 """
 
 if(len(sys.argv) > 1):
