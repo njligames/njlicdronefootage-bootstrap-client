@@ -785,33 +785,70 @@
       <!--? Testimonial Area End -->
 
       <script>
-        function changeSelectLevel1() {
-          if (document.getElementById("dropBox").value == "1") {
-            document.getElementById("divText").innerHTML = "$474.99";
-          } else if (document.getElementById("dropBox").value == "2") {
-            document.getElementById("divText").innerHTML = "$855.99";
-          } else if (document.getElementById("dropBox").value == "3") {
-            document.getElementById("divText").innerHTML = "$1,190.99";
+        // run_residential_real_estate_prices.sh start
+
+        function changeSelectLevelBasic() {
+          if (document.getElementById("dropBoxBasic").value == "1") {
+            document.getElementById("divTextBasic").innerHTML = "$250.00 ";
+          }
+          if (document.getElementById("dropBoxBasic").value == "2") {
+            document.getElementById("divTextBasic").innerHTML = "$325.00 ";
+          }
+          if (document.getElementById("dropBoxBasic").value == "3") {
+            document.getElementById("divTextBasic").innerHTML = "$400.00 ";
+          }
+          if (document.getElementById("dropBoxBasic").value == "4") {
+            document.getElementById("divTextBasic").innerHTML = "$475.00 ";
+          }
+          if (document.getElementById("dropBoxBasic").value == "5") {
+            document.getElementById("divTextBasic").innerHTML = "$550.00 ";
+          }
+          if (document.getElementById("dropBoxBasic").value == "6") {
+            document.getElementById("divTextBasic").innerHTML = "$625.00 ";
           }
         }
-        function changeSelectLevel2() {
-          if (document.getElementById("dropBox2").value == "1") {
-            document.getElementById("divText2").innerHTML = "$426.99";
-          } else if (document.getElementById("dropBox2").value == "2") {
-            document.getElementById("divText2").innerHTML = "$807.99";
-          } else if (document.getElementById("dropBox2").value == "3") {
-            document.getElementById("divText2").innerHTML = "$1,145.99";
+        function changeSelectLevelStandard() {
+          if (document.getElementById("dropBoxStandard").value == "1") {
+            document.getElementById("divTextStandard").innerHTML = "$240.00 ";
+          }
+          if (document.getElementById("dropBoxStandard").value == "2") {
+            document.getElementById("divTextStandard").innerHTML = "$315.00 ";
+          }
+          if (document.getElementById("dropBoxStandard").value == "3") {
+            document.getElementById("divTextStandard").innerHTML = "$390.00 ";
+          }
+          if (document.getElementById("dropBoxStandard").value == "4") {
+            document.getElementById("divTextStandard").innerHTML = "$465.00 ";
+          }
+          if (document.getElementById("dropBoxStandard").value == "5") {
+            document.getElementById("divTextStandard").innerHTML = "$540.00 ";
+          }
+          if (document.getElementById("dropBoxStandard").value == "6") {
+            document.getElementById("divTextStandard").innerHTML = "$615.00 ";
           }
         }
-        function changeSelectLevel3() {
-          if (document.getElementById("dropBox3").value == "1") {
-            document.getElementById("divText3").innerHTML = "$379.99";
-          } else if (document.getElementById("dropBox3").value == "2") {
-            document.getElementById("divText3").innerHTML = "$762.99";
-          } else if (document.getElementById("dropBox3").value == "3") {
-            document.getElementById("divText3").innerHTML = "$1,114.99";
+        function changeSelectLevelPremium() {
+          if (document.getElementById("dropBoxPremium").value == "1") {
+            document.getElementById("divTextPremium").innerHTML = "$230.00 ";
+          }
+          if (document.getElementById("dropBoxPremium").value == "2") {
+            document.getElementById("divTextPremium").innerHTML = "$305.00 ";
+          }
+          if (document.getElementById("dropBoxPremium").value == "3") {
+            document.getElementById("divTextPremium").innerHTML = "$380.00 ";
+          }
+          if (document.getElementById("dropBoxPremium").value == "4") {
+            document.getElementById("divTextPremium").innerHTML = "$455.00 ";
+          }
+          if (document.getElementById("dropBoxPremium").value == "5") {
+            document.getElementById("divTextPremium").innerHTML = "$530.00 ";
+          }
+          if (document.getElementById("dropBoxPremium").value == "6") {
+            document.getElementById("divTextPremium").innerHTML = "$605.00 ";
           }
         }
+
+        // run_residential_real_estate_prices.sh end
       </script>
       <!-- pricing grid start-->
       <section id="pricing">
@@ -824,23 +861,35 @@
                     <h1 class="card-title">Single Visit Bundle</h1>
                     <small class="text-muted">Basic</small>
                     <br /><br />
-                    <span id="divText" class="h2">$474.99</span> / visit
+                    <span id="divTextBasic" class="h2">$250.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox"
-                      onchange="changeSelectLevel1()"
+                      id="dropBoxBasic"
+                      onchange="changeSelectLevelBasic()"
                     >
                       <option value="1">
-                        Up to 1500 ft
+                        Under 2000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="2">
-                        Up to 4000 ft
+                        Under 3000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="3">
-                        Up to 7000 ft
+                        Under 4000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="4">
+                        Under 5000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="5">
+                        Under 6000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="6">
+                        Under 7000 ft
                         <p>&#178;</p>
                       </option>
                     </select>
@@ -885,23 +934,35 @@
                     <h1 class="card-title">5 to 10 Visit Bundle</h1>
                     <small class="text-muted">Standard</small>
                     <br /><br />
-                    <span id="divText2" class="h2">$426.99</span> / visit
+                    <span id="divTextStandard" class="h2">$240.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox2"
-                      onchange="changeSelectLevel2()"
+                      id="dropBoxStandard"
+                      onchange="changeSelectLevelStandard()"
                     >
                       <option value="1">
-                        Up to 1500 ft
+                        Under 2000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="2">
-                        Up to 4000 ft
+                        Under 3000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="3">
-                        Up to 7000 ft
+                        Under 4000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="4">
+                        Under 5000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="5">
+                        Under 6000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="6">
+                        Under 7000 ft
                         <p>&#178;</p>
                       </option>
                     </select>
@@ -946,23 +1007,35 @@
                     <h1 class="card-title">11+ Visit Bundle</h1>
                     <small class="text-muted">Premium</small>
                     <br /><br />
-                    <span id="divText3" class="h2">$379.99</span> / visit
+                    <span id="divTextPremium" class="h2">$230.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox3"
-                      onchange="changeSelectLevel3()"
+                      id="dropBoxPremium"
+                      onchange="changeSelectLevelPremium()"
                     >
                       <option value="1">
-                        Up to 1500 ft
+                        Under 2000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="2">
-                        Up to 4000 ft
+                        Under 3000 ft
                         <p>&#178;</p>
                       </option>
                       <option value="3">
-                        Up to 7000 ft
+                        Under 4000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="4">
+                        Under 5000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="5">
+                        Under 6000 ft
+                        <p>&#178;</p>
+                      </option>
+                      <option value="6">
+                        Under 7000 ft
                         <p>&#178;</p>
                       </option>
                     </select>

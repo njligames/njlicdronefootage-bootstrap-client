@@ -524,33 +524,43 @@
       <!--? Testimonial Area End -->
 
       <script>
-        function changeSelectLevel1() {
-          if (document.getElementById("dropBox").value == "1") {
-            document.getElementById("divText").innerHTML = "$474.99";
-          } else if (document.getElementById("dropBox").value == "2") {
-            document.getElementById("divText").innerHTML = "$855.99";
-          } else if (document.getElementById("dropBox").value == "3") {
-            document.getElementById("divText").innerHTML = "$1,190.99";
+        // run_aerial_photography_prices.sh start
+
+        function changeSelectLevelBasic() {
+          if (document.getElementById("dropBoxBasic").value == "1") {
+            document.getElementById("divTextBasic").innerHTML = "$80.00";
+          }
+          if (document.getElementById("dropBoxBasic").value == "2") {
+            document.getElementById("divTextBasic").innerHTML = "$295.00";
+          }
+          if (document.getElementById("dropBoxBasic").value == "3") {
+            document.getElementById("divTextBasic").innerHTML = "$590.00";
           }
         }
-        function changeSelectLevel2() {
-          if (document.getElementById("dropBox2").value == "1") {
-            document.getElementById("divText2").innerHTML = "$426.99";
-          } else if (document.getElementById("dropBox2").value == "2") {
-            document.getElementById("divText2").innerHTML = "$807.99";
-          } else if (document.getElementById("dropBox2").value == "3") {
-            document.getElementById("divText2").innerHTML = "$1,145.99";
+        function changeSelectLevelStandard() {
+          if (document.getElementById("dropBoxStandard").value == "1") {
+            document.getElementById("divTextStandard").innerHTML = "$73.00";
+          }
+          if (document.getElementById("dropBoxStandard").value == "2") {
+            document.getElementById("divTextStandard").innerHTML = "$267.00";
+          }
+          if (document.getElementById("dropBoxStandard").value == "3") {
+            document.getElementById("divTextStandard").innerHTML = "$534.00";
           }
         }
-        function changeSelectLevel3() {
-          if (document.getElementById("dropBox3").value == "1") {
-            document.getElementById("divText3").innerHTML = "$379.99";
-          } else if (document.getElementById("dropBox3").value == "2") {
-            document.getElementById("divText3").innerHTML = "$762.99";
-          } else if (document.getElementById("dropBox3").value == "3") {
-            document.getElementById("divText3").innerHTML = "$1,114.99";
+        function changeSelectLevelPremium() {
+          if (document.getElementById("dropBoxPremium").value == "1") {
+            document.getElementById("divTextPremium").innerHTML = "$66.00";
+          }
+          if (document.getElementById("dropBoxPremium").value == "2") {
+            document.getElementById("divTextPremium").innerHTML = "$239.00";
+          }
+          if (document.getElementById("dropBoxPremium").value == "3") {
+            document.getElementById("divTextPremium").innerHTML = "$478.00";
           }
         }
+
+        // run_aerial_photography_prices.sh end
       </script>
       <!-- pricing grid start-->
       <section id="pricing">
@@ -563,12 +573,12 @@
                     <h1 class="card-title">Single Visit Bundle</h1>
                     <small class="text-muted">Basic</small>
                     <br /><br />
-                    <span id="divText" class="h2">$474.99</span> / visit
+                    <span id="divTextBasic" class="h2">$80.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox"
-                      onchange="changeSelectLevel1()"
+                      id="dropBoxBasic"
+                      onchange="changeSelectLevelBasic()"
                     >
                       <option value="1">Hourly</option>
                       <option value="2">Half Day</option>
@@ -602,12 +612,12 @@
                     <h1 class="card-title">5 to 10 Visit Bundle</h1>
                     <small class="text-muted">Standard</small>
                     <br /><br />
-                    <span id="divText2" class="h2">$426.99</span> / visit
+                    <span id="divTextStandard" class="h2">$73.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox2"
-                      onchange="changeSelectLevel2()"
+                      id="dropBoxStandard"
+                      onchange="changeSelectLevelStandard()"
                     >
                       <option value="1">Hourly</option>
                       <option value="2">Half Day</option>
@@ -641,12 +651,12 @@
                     <h1 class="card-title">11+ Visit Bundle</h1>
                     <small class="text-muted">Premium</small>
                     <br /><br />
-                    <span id="divText3" class="h2">$379.99</span> / visit
+                    <span id="divTextPremium" class="h2">$66.00</span> / visit
                     <br /><br />
                     <select
                       type="text"
-                      id="dropBox3"
-                      onchange="changeSelectLevel3()"
+                      id="dropBoxPremium"
+                      onchange="changeSelectLevelPremium()"
                     >
                       <option value="1">Hourly</option>
                       <option value="2">Half Day</option>
