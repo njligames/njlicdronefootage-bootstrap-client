@@ -13,6 +13,13 @@ individual_item="""if (document.getElementById("dropBox{package}").value == "{in
     document.getElementById("divText{package}").innerHTML = "{price}";
   }}"""
 
+def loopArray(varname, array):
+    retVal = "let " + varname + " = ["
+    for index in range(len(array) - 1):
+        retVal += array[index][1:]  + ", "
+    retVal += array[index][1:]  + "];\n"
+    return retVal
+
 if(len(sys.argv) > 1):
     filename = sys.argv[1]
 
@@ -26,37 +33,9 @@ if(len(sys.argv) > 1):
             standard.append(row["standard"])
             premium.append(row["premium"])
 
-        outer_output = ""
-
-        output=""
-        index = 1
-        package = "Basic"
-        for price in basic:
-
-            output += individual_item.format(package=package, index=str(index), price=price)
-            index += 1
-
-        outer_output += item.format(function_name="changeSelectLevel" + package, individual_items=output)
-
-        output=""
-        index = 1
-        package = "Standard"
-        for price in standard:
-
-            output += individual_item.format(package=package, index=str(index), price=price)
-            index += 1
-
-        outer_output += item.format(function_name="changeSelectLevel" + package, individual_items=output)
-
-        output=""
-        index = 1
-        package = "Premium"
-        for price in premium:
-
-            output += individual_item.format(package=package, index=str(index), price=price)
-            index += 1
-
-        outer_output += item.format(function_name="changeSelectLevel" + package, individual_items=output)
+        outer_output = loopArray("basic_prices", basic)
+        outer_output += loopArray("standard_prices", standard)
+        outer_output += loopArray("premium_prices", premium)
 
         print(outer_output)
 
