@@ -13,11 +13,15 @@ individual_item="""if (document.getElementById("dropBox{package}").value == "{in
     document.getElementById("divText{package}").innerHTML = "{price}";
   }}"""
 
+def mid(s, offset, amount):
+    return s[offset:offset+amount]
+
 def loopArray(varname, array):
     retVal = "let " + varname + " = ["
-    for index in range(len(array) - 1):
+    for index in range(len(array)):
         retVal += array[index][1:]  + ", "
-    retVal += array[index][1:]  + "];\n"
+    retVal = mid(retVal, 0, len(retVal) - 2)
+    retVal += "];\n"
     return retVal
 
 if(len(sys.argv) > 1):
