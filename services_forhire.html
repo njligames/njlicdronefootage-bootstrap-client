@@ -524,46 +524,404 @@
       <!--? Testimonial Area End -->
 
       <script>
+        // Run this script when prices change
         // run_aerial_photography_prices.sh start
+        let basic_prices = [80.0, 295.0, 295.0];
+        let standard_prices = [73.0, 267.0, 267.0];
+        let premium_prices = [66.0, 239.0, 239.0];
+        // run_aerial_photography_prices.sh end
+
+        let USDollar = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
+        });
+
+        function loadPrices() {
+          document.getElementById("divTextBasic").innerHTML =
+            USDollar.format(basic_prices[0]) + " / visit";
+          document.getElementById("divTextBasicModal").innerHTML =
+            USDollar.format(basic_prices[0]) + " / visit";
+
+          document.getElementById("divTextStandard").innerHTML =
+            USDollar.format(standard_prices[0]) + " / visit";
+          document.getElementById("divTextStandardModal").innerHTML =
+            USDollar.format(standard_prices[0]) + " / visit";
+
+          document.getElementById("divTextPremium").innerHTML =
+            USDollar.format(premium_prices[0]) + " / visit";
+          document.getElementById("divTextPremiumModal").innerHTML =
+            USDollar.format(premium_prices[0]) + " / visit";
+        }
+
+        function changeSelectLevel(packageName) {
+          var prices = basic_prices;
+          if ("Standard" == packageName) {
+            prices = standard_prices;
+          } else if ("Premium" == packageName) {
+            prices = premium_prices;
+          }
+          for (let index = 1; index < prices.length + 1; index++) {
+            if (
+              document.getElementById("dropBox" + packageName).value ==
+              String(index)
+            ) {
+              var value = prices[index - 1];
+              var quantity = 1;
+              let price = quantity * value;
+              document.getElementById("divText" + packageName).innerHTML =
+                USDollar.format(price) + " / visit";
+            }
+            if (
+              document.getElementById("dropBox" + packageName + "Modal")
+                .value == String(index)
+            ) {
+              var value = prices[index - 1];
+              var quantity = parseInt(
+                document.getElementById("quantity" + packageName).value
+              );
+              let totalPrice = quantity * value;
+              document.getElementById(
+                "divText" + packageName + "Modal"
+              ).innerHTML =
+                "<div>" +
+                String(quantity) +
+                " (visits) x " +
+                USDollar.format(value) +
+                " (per visit) <br/>" +
+                USDollar.format(totalPrice) +
+                " Total" +
+                "</div>";
+            }
+          }
+        }
 
         function changeSelectLevelBasic() {
-          if (document.getElementById("dropBoxBasic").value == "1") {
-            document.getElementById("divTextBasic").innerHTML = "$80.00";
-          }
-          if (document.getElementById("dropBoxBasic").value == "2") {
-            document.getElementById("divTextBasic").innerHTML = "$295.00";
-          }
-          if (document.getElementById("dropBoxBasic").value == "3") {
-            document.getElementById("divTextBasic").innerHTML = "$590.00";
-          }
+          changeSelectLevel("Basic");
         }
         function changeSelectLevelStandard() {
-          if (document.getElementById("dropBoxStandard").value == "1") {
-            document.getElementById("divTextStandard").innerHTML = "$73.00";
-          }
-          if (document.getElementById("dropBoxStandard").value == "2") {
-            document.getElementById("divTextStandard").innerHTML = "$267.00";
-          }
-          if (document.getElementById("dropBoxStandard").value == "3") {
-            document.getElementById("divTextStandard").innerHTML = "$534.00";
-          }
+          changeSelectLevel("Standard");
         }
         function changeSelectLevelPremium() {
-          if (document.getElementById("dropBoxPremium").value == "1") {
-            document.getElementById("divTextPremium").innerHTML = "$66.00";
-          }
-          if (document.getElementById("dropBoxPremium").value == "2") {
-            document.getElementById("divTextPremium").innerHTML = "$239.00";
-          }
-          if (document.getElementById("dropBoxPremium").value == "3") {
-            document.getElementById("divTextPremium").innerHTML = "$478.00";
-          }
+          changeSelectLevel("Premium");
         }
-
-        // run_aerial_photography_prices.sh end
       </script>
       <!-- pricing grid start-->
       <section id="pricing">
+        <!-- Start Basic Modal-->
+        <div
+          class="modal fade"
+          id="modalBasic"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          onfocus="changeSelectLevelBasic()"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Basic</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-4 ml-auto"></div>
+                  <div class="col-md-4 ml-auto text-center">
+                    <h1 class="card-title text-center">Single Visit</h1>
+                    <br /><br />
+                    <span
+                      id="divTextBasicModal"
+                      class="h2 d-flex justify-content-center"
+                    ></span>
+                    <br /><br />
+                    <div>
+                      <select
+                        type="text"
+                        name="dropBoxBasicModal"
+                        id="dropBoxBasicModal"
+                        onchange="changeSelectLevelBasic()"
+                        form="Basicform"
+                      >
+                        <option value="1">Hourly</option>
+                        <option value="2">Half Day</option>
+                        <option value="3">Full Day</option>
+                      </select>
+                      <form
+                        target="_blank"
+                        action="http://localhost:4242/create-checkout-session"
+                        method="POST"
+                        id="Basicform"
+                      >
+                        <input
+                          type="hidden"
+                          id="service"
+                          name="service"
+                          value="construction"
+                        />
+                        <input
+                          type="hidden"
+                          id="package"
+                          name="package"
+                          value="Basic"
+                        />
+                        <br /><br />
+                        <div>
+                          <label for="quantityBasic">Quantity:</label>
+                          <input
+                            type="number"
+                            id="quantityBasic"
+                            name="quantityBasic"
+                            min="1"
+                            max="10000"
+                            value="1"
+                            onchange="changeSelectLevelBasic()"
+                          />
+                        </div>
+                        <div class="d-grid my-3">
+                          <button
+                            type="submit"
+                            id="checkout-button"
+                            class="btn btn-outline-dark btn-block"
+                          >
+                            Select
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4 ml-auto"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Basic Modal-->
+        <!-- Start Standard Modal-->
+        <div
+          class="modal fade"
+          id="modalStandard"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          onfocus="changeSelectLevelStandard()"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Standard</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-4 ml-auto"></div>
+                  <div class="col-md-4 ml-auto text-center">
+                    <h1 class="card-title text-center">5+ Visits</h1>
+                    <br /><br />
+                    <span
+                      id="divTextStandardModal"
+                      class="h2 d-flex justify-content-center"
+                    ></span>
+                    <br /><br />
+                    <div>
+                      <select
+                        type="text"
+                        name="dropBoxStandardModal"
+                        id="dropBoxStandardModal"
+                        onchange="changeSelectLevelStandard()"
+                        form="Standardform"
+                      >
+                        <option value="1">Hourly</option>
+                        <option value="2">Half Day</option>
+                        <option value="3">Full Day</option>
+                      </select>
+                      <form
+                        target="_blank"
+                        action="http://localhost:4242/create-checkout-session"
+                        method="POST"
+                        id="Standardform"
+                      >
+                        <input
+                          type="hidden"
+                          id="service"
+                          name="service"
+                          value="construction"
+                        />
+                        <input
+                          type="hidden"
+                          id="package"
+                          name="package"
+                          value="Standard"
+                        />
+                        <br /><br />
+                        <div>
+                          <label for="quantityStandard">Quantity:</label>
+                          <input
+                            type="number"
+                            id="quantityStandard"
+                            name="quantityStandard"
+                            min="5"
+                            max="10000"
+                            value="5"
+                            onchange="changeSelectLevelStandard()"
+                          />
+                        </div>
+                        <div class="d-grid my-3">
+                          <button
+                            type="submit"
+                            id="checkout-button"
+                            class="btn btn-outline-dark btn-block"
+                          >
+                            Select
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4 ml-auto"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Standard Modal-->
+        <!-- Start Premium Modal-->
+        <div
+          class="modal fade"
+          id="modalPremium"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+          onfocus="changeSelectLevelPremium()"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Premium</h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-md-4 ml-auto"></div>
+                  <div class="col-md-4 ml-auto text-center">
+                    <h1 class="card-title text-center">11+ Visits</h1>
+                    <br /><br />
+                    <span
+                      id="divTextPremiumModal"
+                      class="h2 d-flex justify-content-center"
+                    ></span>
+                    <br /><br />
+                    <div>
+                      <select
+                        type="text"
+                        name="dropBoxPremiumModal"
+                        id="dropBoxPremiumModal"
+                        onchange="changeSelectLevelPremium()"
+                        form="Premiumform"
+                      >
+                        <option value="1">Hourly</option>
+                        <option value="2">Half Day</option>
+                        <option value="3">Full Day</option>
+                      </select>
+                      <form
+                        target="_blank"
+                        action="http://localhost:4242/create-checkout-session"
+                        method="POST"
+                        id="Premiumform"
+                      >
+                        <input
+                          type="hidden"
+                          id="service"
+                          name="service"
+                          value="construction"
+                        />
+                        <input
+                          type="hidden"
+                          id="package"
+                          name="package"
+                          value="Premium"
+                        />
+                        <br /><br />
+                        <div>
+                          <label for="quantityPremium">Quantity:</label>
+                          <input
+                            type="number"
+                            id="quantityPremium"
+                            name="quantityPremium"
+                            min="11"
+                            max="10000"
+                            value="11"
+                            onchange="changeSelectLevelPremium()"
+                          />
+                        </div>
+                        <div class="d-grid my-3">
+                          <button
+                            type="submit"
+                            id="checkout-button"
+                            class="btn btn-outline-dark btn-block"
+                          >
+                            Select
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                  <div class="col-md-4 ml-auto"></div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Premium Modal-->
         <div class="container-fluid">
           <div class="container p-5">
             <div class="row">
@@ -586,7 +944,11 @@
                     </select>
                     <br /><br />
                     <div class="d-grid my-3">
-                      <button class="btn btn-outline-dark btn-block">
+                      <button
+                        class="btn btn-outline-dark btn-block"
+                        data-toggle="modal"
+                        data-target="#modalBasic"
+                      >
                         Select
                       </button>
                     </div>
@@ -625,7 +987,11 @@
                     </select>
                     <br /><br />
                     <div class="d-grid my-3">
-                      <button class="btn btn-outline-dark btn-block">
+                      <button
+                        class="btn btn-outline-dark btn-block"
+                        data-toggle="modal"
+                        data-target="#modalStandard"
+                      >
                         Select
                       </button>
                     </div>
@@ -664,7 +1030,11 @@
                     </select>
                     <br /><br />
                     <div class="d-grid my-3">
-                      <button class="btn btn-outline-dark btn-block">
+                      <button
+                        class="btn btn-outline-dark btn-block"
+                        data-toggle="modal"
+                        data-target="#modalPremium"
+                      >
                         Select
                       </button>
                     </div>
