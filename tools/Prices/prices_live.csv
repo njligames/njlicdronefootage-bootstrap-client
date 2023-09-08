@@ -1,0 +1,37 @@
+Price ID,Product ID,Product Name,Product Statement Descriptor,Product Tax Code,Description,Created (UTC),Amount,Currency,Interval,Interval Count,Usage Type,Aggregate Usage,Billing Scheme,Trial Period Days,Tax Behavior
+price_1No8PqArNcC9EQIocmZhRxla,prod_ObL63iC4Oq5E8U,Construction - Size A - Basic,,txcd_20030000,,2023-09-08 17:24,474.99,usd,,,,,per_unit,,unspecified
+price_1No8PgArNcC9EQIo9eTwf4G3,prod_ObL5cMogGhMzEL,Construction - Size A - Standard,,txcd_20030000,,2023-09-08 17:24,426.99,usd,,,,,per_unit,,unspecified
+price_1No8PXArNcC9EQIoHrnfvYrb,prod_ObL5InWComicAj,Construction - Size A - Premium,,txcd_20030000,,2023-09-08 17:24,379.99,usd,,,,,per_unit,,unspecified
+price_1No8PLArNcC9EQIo3VH1jj7Y,prod_ObL5OBMyOguYuH,Construction - Size B - Basic,,txcd_20030000,,2023-09-08 17:23,855.99,usd,,,,,per_unit,,unspecified
+price_1No8P8ArNcC9EQIoeh4qODoC,prod_ObL5D1wpPLq5gp,Construction - Size B - Standard,,txcd_20030000,,2023-09-08 17:23,807.99,usd,,,,,per_unit,,unspecified
+price_1No8OuArNcC9EQIoSYFZ7amX,prod_ObL5fTL91QBVN7,Construction - Size B - Premium,,txcd_20030000,,2023-09-08 17:23,762.99,usd,,,,,per_unit,,unspecified
+price_1No8OaArNcC9EQIoibYDguIb,prod_ObL4pVM5T0YHhY,Construction - Size C - Basic,,txcd_20030000,,2023-09-08 17:23,1190.00,usd,,,,,per_unit,,unspecified
+price_1No8OMArNcC9EQIo6qQ0DCtr,prod_ObL4WynIrWSh00,Construction - Size C - Standard,,txcd_20030000,,2023-09-08 17:22,1145.99,usd,,,,,per_unit,,unspecified
+price_1No8O5ArNcC9EQIoRKrM6KwU,prod_ObL465HmQ6THiN,Construction - Size C - Premium,,txcd_20030000,,2023-09-08 17:22,1114.99,usd,,,,,per_unit,,unspecified
+price_1No8N3ArNcC9EQIoncoq39Ko,prod_ObL3C2EfiCO65i,Real Estate - Size A - Basic,,txcd_20030000,,2023-09-08 17:21,250.00,usd,,,,,per_unit,,unspecified
+price_1No8MrArNcC9EQIoiVvItTDf,prod_ObL2HQ3P6cnCoi,Real Estate - Size A - Standard,,txcd_20030000,,2023-09-08 17:21,240.00,usd,,,,,per_unit,,unspecified
+price_1No8MhArNcC9EQIo8KDJ2Azr,prod_ObL2S2raetKXGl,Real Estate - Size A - Premium,,txcd_20030000,,2023-09-08 17:21,230.00,usd,,,,,per_unit,,unspecified
+price_1No8MSArNcC9EQIoJlXY0SoR,prod_ObL2G0HPKwuoS3,Real Estate - Size B - Basic,,txcd_20030000,,2023-09-08 17:20,325.00,usd,,,,,per_unit,,unspecified
+price_1No8MHArNcC9EQIoUcL8IQsy,prod_ObL2gueu74fx8R,Real Estate - Size B - Standard,,txcd_20030000,,2023-09-08 17:20,315.00,usd,,,,,per_unit,,unspecified
+price_1No8LzArNcC9EQIoEDes2hBU,prod_ObL2WSkYTpMmSF,Real Estate - Size B - Premium,,txcd_20030000,,2023-09-08 17:20,305.00,usd,,,,,per_unit,,unspecified
+price_1No8LiArNcC9EQIoU5mgfI4Y,prod_ObL1uyuHfxLJka,Real Estate - Size C - Basic,,txcd_20030000,,2023-09-08 17:20,400.00,usd,,,,,per_unit,,unspecified
+price_1No8LPArNcC9EQIoyiRmD2tQ,prod_ObL1NeCp2Ue5UT,Real Estate - Size C - Standard,,txcd_20030000,,2023-09-08 17:19,390.00,usd,,,,,per_unit,,unspecified
+price_1No8LFArNcC9EQIoiu41PXpR,prod_ObL1R3wqDDrAUn,Real Estate - Size C - Premium,,txcd_20030000,,2023-09-08 17:19,380.00,usd,,,,,per_unit,,unspecified
+price_1No8L3ArNcC9EQIozEUAAZTP,prod_ObL1PjU5KpJIp6,Real Estate - Size D - Basic,,txcd_20030000,,2023-09-08 17:19,475.00,usd,,,,,per_unit,,unspecified
+price_1No8KqArNcC9EQIoXtLgLTs4,prod_ObL0UrSrBbocyf,Real Estate - Size D - Standard,,txcd_20030000,,2023-09-08 17:19,465.00,usd,,,,,per_unit,,unspecified
+price_1No8KXArNcC9EQIoAptLRBs7,prod_ObL0nYytd6y5fr,Real Estate - Size D - Premium,,txcd_20030000,,2023-09-08 17:18,455.00,usd,,,,,per_unit,,unspecified
+price_1No8KGArNcC9EQIolaPFBi5k,prod_ObL0BcXpCL6rt0,Real Estate - Size E - Basic,,txcd_20030000,,2023-09-08 17:18,550.00,usd,,,,,per_unit,,unspecified
+price_1No8K6ArNcC9EQIorzjQBRyd,prod_ObL0SXKYYXjJwC,Real Estate - Size E - Standard,,txcd_20030000,,2023-09-08 17:18,540.00,usd,,,,,per_unit,,unspecified
+price_1No8JxArNcC9EQIooVVqgcvz,prod_ObKznVy0V6EnJ5,Real Estate - Size E - Premium,,txcd_20030000,,2023-09-08 17:18,530.00,usd,,,,,per_unit,,unspecified
+price_1No8JoArNcC9EQIoBItCNEz4,prod_ObKzGNWZv2Gd3o,Real Estate - Size F - Basic,,txcd_20030000,,2023-09-08 17:18,625.00,usd,,,,,per_unit,,unspecified
+price_1No8JhArNcC9EQIoKGW1mg9i,prod_ObKzmo7Aol2sJO,Real Estate - Size F - Standard,,txcd_20030000,,2023-09-08 17:18,615.00,usd,,,,,per_unit,,unspecified
+price_1No8JaArNcC9EQIoZ5v63ww8,prod_ObKzogPvTfDsfz,Real Estate - Size F - Premium,,txcd_20030000,,2023-09-08 17:17,605.00,usd,,,,,per_unit,,unspecified
+price_1No8JOArNcC9EQIoIG4dCx6g,prod_ObKzbPvD48k8Ot,Aerial Photography - Size A - Basic,,txcd_20030000,,2023-09-08 17:17,80.00,usd,,,,,per_unit,,unspecified
+price_1No8JIArNcC9EQIooy0e6qyq,prod_ObKzavfQ1Wsun8,Aerial Photography - Size A - Standard,,txcd_20030000,,2023-09-08 17:17,73.00,usd,,,,,per_unit,,unspecified
+price_1No8J7ArNcC9EQIoazRuoqX7,prod_ObKzcda1hP1P92,Aerial Photography - Size A - Premium,,txcd_20030000,,2023-09-08 17:17,66.00,usd,,,,,per_unit,,unspecified
+price_1No8IyArNcC9EQIoW9C4EzYM,prod_ObKyH5PLuOZfqz,Aerial Photography - Size B - Basic,,txcd_20030000,,2023-09-08 17:17,295.00,usd,,,,,per_unit,,unspecified
+price_1No8IqArNcC9EQIoZNsrpydk,prod_ObKyls7q53THhm,Aerial Photography - Size B - Standard,,txcd_20030000,,2023-09-08 17:17,267.00,usd,,,,,per_unit,,unspecified
+price_1No8IiArNcC9EQIoqSEca6cp,prod_ObKyQeTBeNOBEF,Aerial Photography - Size B - Premium,,txcd_20030000,,2023-09-08 17:17,239.00,usd,,,,,per_unit,,unspecified
+price_1No8HlArNcC9EQIo4JVtkT7i,prod_ObKxhUkKQFoald,Aerial Photography - Size C - Basic,,txcd_20030000,,2023-09-08 17:16,590.00,usd,,,,,per_unit,,unspecified
+price_1No8HQArNcC9EQIohYk945o5,prod_ObKxQYanaIs5EH,Aerial Photography - Size C - Standard,,txcd_20030000,,2023-09-08 17:15,534.00,usd,,,,,per_unit,,unspecified
+price_1No8H9ArNcC9EQIon48bhnvU,prod_ObKxitkthmzgwF,Aerial Photography - Size C - Premium,,txcd_20030000,,2023-09-08 17:15,478.00,usd,,,,,per_unit,,unspecified
